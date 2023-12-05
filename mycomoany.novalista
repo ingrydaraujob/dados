@@ -1,0 +1,44 @@
+package com.mycompany.novalista;
+
+/**
+ *
+ * 
+ */
+public class regcliente {
+    private String nome;
+    private String pais;
+    private String codigo;
+
+    public regcliente(String nome, String pais, String codigo) {
+        this.nome = nome;
+        this.pais = pais;
+        this.codigo = codigo;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public String getPais() {
+        return pais;
+    }
+
+    public void setPais(String pais) {
+        this.pais = pais;
+    }
+
+    public String getCodigo() {
+        return codigo;
+    }
+
+    public void setCodigo(String codigo) {
+        this.codigo = codigo;
+    }
+    
+    
+    
+}
