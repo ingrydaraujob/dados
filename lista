@@ -1,0 +1,30 @@
+public class NovaLista {
+
+    public static void main(String[] args) {
+        ArrayList<regcliente> lista = new ArrayList();
+        String caminhoArquivo = "C:\\Users\\Miétje\\Downloads\\Clientes2.txt";
+ 
+        String nome;
+        String pais;
+        String codigo;
+        try {
+            File arquivo = new File(caminhoArquivo);
+            Scanner leitor = new Scanner(arquivo);
+            Scanner leia = new Scanner(System.in);
+            while(leitor.hasNextLine()){
+                String linha = leitor.nextLine();
+                nome = linha.substring(6,24);
+                codigo = linha.substring(0,5);
+                pais = linha.substring(24,32);
+                
+                regcliente reg = new regcliente(pais,nome,codigo);
+                lista.add(reg);
+            }
+        }catch(Exception e) {
+            System.out.println("arquivo n encontrado");
+        }
+        for (regcliente item : lista){
+            System.out.println(item.getCodigo());
+        }
+    }
+}
