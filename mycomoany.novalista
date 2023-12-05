@@ -2,7 +2,7 @@ package com.mycompany.novafila;
 
 /**
  *
- * 
+ * @author miétje
  */
 public class regcliente {
     private String nome;
